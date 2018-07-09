@@ -21,11 +21,13 @@
         //helloLabel.rotation += 5;
         stage.update();
     }
+    function init() {
+    }
     function Main() {
         console.log("%c Main Function", "font-style:italic; font-size:16px; color:blue;");
-        welcomeLabel = new objects.Label("Screen", "60px", "Consolas", "#000000", 320, 240, true);
+        welcomeLabel = new objects.Label("Screen", "60px", "Consolas", "#000000", 220, 200, true);
         stage.addChild(welcomeLabel);
-        startButton = new objects.Button("../../Assets/StartButton.png", 320, 240, true);
+        startButton = new objects.Button("../../Assets/StartButton.png", 220, 140, true);
         stage.addChild(startButton);
         startButton.on("click", function () {
             welcomeLabel.text = "Clicked";
