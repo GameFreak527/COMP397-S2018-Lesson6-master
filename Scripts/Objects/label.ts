@@ -1,6 +1,12 @@
 module objects{
     export class Label extends createjs.Text{
         //Member Variables
+        /**
+         *
+         *
+         * @type {boolean}
+         * @memberof Label
+         */
         public isCentered: boolean= false;
         public height:number;
         public width:number;

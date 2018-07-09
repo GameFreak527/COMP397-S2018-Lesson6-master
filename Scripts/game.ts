@@ -26,7 +26,8 @@
     function Main():void {
         console.log(`%c Main Function`,"font-style:italic; font-size:16px; color:blue;");
 
-        
+        welcomeLabel = new objects.Label("Welcome","60px","Consolas","#000000",320,240,true);
+        stage.addChild(welcomeLabel);
     }
 
     window.addEventListener("load", Start);
