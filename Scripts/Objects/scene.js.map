@@ -1,1 +1,1 @@
-{"version":3,"file":"scene.js","sourceRoot":"","sources":["scene.ts"],"names":[],"mappings":""}
+{"version":3,"file":"scene.js","sourceRoot":"","sources":["scene.ts"],"names":[],"mappings":";;;;;;;;;;AAAA,IAAO,OAAO,CA2Bb;AA3BD,WAAO,OAAO;IACV;QAAoC,yBAAkB;QAElD,eAAe;QACf;mBACI,iBAAO;QACX,CAAC;QACL,iBAAiB;QAEjB,gBAAgB;QAET,qBAAK,GAAZ;QAEA,CAAC;QAEM,sBAAM,GAAb;QAEA,CAAC;QAEM,qBAAK,GAAZ;QAEA,CAAC;QAEM,oBAAI,GAAX;QAEA,CAAC;QACD,YAAC;IAAD,CAAC,AAzBD,CAAoC,QAAQ,CAAC,SAAS,GAyBrD;IAzBqB,aAAK,QAyB1B,CAAA;AACL,CAAC,EA3BM,OAAO,KAAP,OAAO,QA2Bb"}

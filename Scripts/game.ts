@@ -5,8 +5,8 @@
     let canvas:HTMLCanvasElement;
     let stage:createjs.Stage;
     let helloLabel:createjs.Text;
-    let welcomeLabel:objects.Label;
-    let startButton:objects.Button;
+    let currentScene: objects.Scene;
+    let currentState:config.Scene;
     let AssetManager:createjs.LoadQueue;
     let Manifest = [
         {id:"StartButton",src:"../../Assets/StartButton.png"}
@@ -29,12 +29,13 @@
         createjs.Ticker.framerate = 60; // sets framerate to 60fps
         createjs.Ticker.on("tick", Update);
 
+        currentState= config.Scene.START;
         // This is where all the magic happens
         Main();
     }
 //Game Loop
     function Update():void {
-        //helloLabel.rotation += 5;
+        currentScene.Update();
 
         stage.update();
     }
@@ -45,16 +46,18 @@
 
     function Main():void {
         console.log(`%c Main Function`,"font-style:italic; font-size:16px; color:blue;");
+        switch(currentState){
+            case config.Scene.START:
+            currentScene = new Scenes.Start();
+            break;
 
-        welcomeLabel = new objects.Label("Screen","60px","Consolas","#000000",220,200,true);
-        stage.addChild(welcomeLabel);
+            case config.Scene.PLAY:
+            break;
 
-        startButton = new objects.Button("StartButton",220,140,true);
-        stage.addChild(startButton);
-
-        startButton.on("click",function(){
-            welcomeLabel.text = "Clicked";
-        });
+            case config.Scene.END:
+            break;
+        }
+        stage.addChild(currentScene);
     }
 
     window.addEventListener("load", Init);
