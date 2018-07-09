@@ -19,6 +19,12 @@ var objects;
             if (isCentered === void 0) { isCentered = false; }
             var _this = _super.call(this, text, fontSize + " " + fontFamily, fontColor) || this;
             //Member Variables
+            /**
+             *
+             *
+             * @type {boolean}
+             * @memberof Label
+             */
             _this.isCentered = false;
             _this.isCentered = isCentered;
             _this._initialize; // Initialize the componenets declared in the private method
